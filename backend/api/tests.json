@@ -1,0 +1,42 @@
+{
+  "tests": [
+    {
+      "name": "Get all currencies",
+      "method": "GET",
+      "path": "/currencies",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "currencies": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Get transactions history",
+      "method": "GET",
+      "path": "/transactions?limit=10",
+      "expectedStatus": 200,
+      "expectedBody": {
+        "transactions": "array"
+      },
+      "bodyMatcher": "partial"
+    },
+    {
+      "name": "Create new transaction",
+      "method": "POST",
+      "path": "/transactions",
+      "body": {
+        "from_currency": "USD",
+        "to_currency": "RUB",
+        "from_amount": 100,
+        "to_amount": 9420,
+        "rate": 94.20,
+        "office": "Москва, Центр"
+      },
+      "expectedStatus": 201,
+      "expectedBody": {
+        "transaction": "object"
+      },
+      "bodyMatcher": "partial"
+    }
+  ]
+}

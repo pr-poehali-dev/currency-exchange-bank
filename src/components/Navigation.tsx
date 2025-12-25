@@ -12,6 +12,7 @@ const Navigation = () => {
     { path: '/rates', label: 'Курсы', icon: 'TrendingUp' },
     { path: '/history', label: 'История', icon: 'Clock' },
     { path: '/contacts', label: 'Контакты', icon: 'MapPin' },
+    { path: '/admin', label: 'Управление', icon: 'Settings' },
   ];
 
   return (
